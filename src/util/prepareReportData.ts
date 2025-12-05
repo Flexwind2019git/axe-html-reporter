@@ -83,7 +83,7 @@ export function prepareReportData({
                 helpUrl,
                 nodes: nodes.map(({ target, html, failureSummary, any }, nodeIndex) => {
                     const targetNodes = hljs.highlight(target.join('\n'), { language: 'css' }).value;
-                    const htmlContent = hljs.highlight(html, { language: 'html' }).value;
+                    const htmlContent = hljs.highlight(html, { language: 'xml' }).value;
                     const defaultHighlight = {
                         highlight: 'Recommendation with the fix was not provided by axe result',
                     };
