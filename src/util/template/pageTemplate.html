@@ -247,6 +247,15 @@
             display: none;
         }
 
+        /* Custom expand/collapse indicator */
+        details>summary::before {
+            content: '▶ ';
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        details[open]>summary::before {
+            transform: rotate(90deg);
+        }
         details[open]>summary {
             border-bottom: 1px solid rgba(0, 0, 0, 0.125);
         }
