@@ -43,7 +43,7 @@ export function createHtmlReport({ results, options }: CreateReport): string {
             inapplicable: results.inapplicable,
         });
         const highlightJsStyle = fs.readFileSync(
-            path.resolve(require.resolve('highlight.js'), '../../styles/stackoverflow-light.min.css'),
+            require.resolve('highlight.js/styles/stackoverflow-light.min.css'),
             'utf8'
         );
         const htmlContent = mustache.render(template, {
